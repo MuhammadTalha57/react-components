@@ -10,13 +10,14 @@ interface Props {
 }
 
 export const EnvelopesProvider: FC<PropsWithChildren<Props>> = ({ envelopes, children }) => {
+  console.log(envelopes);
   const { gherkinQuery, cucumberQuery } = useMemo(() => {
     const gherkinQuery = new GherkinQuery()
     const cucumberQuery = new CucumberQuery()
     for (const envelope of envelopes) {
-      if (!envelope) {
-        continue
-      }
+      // if (!envelope) {
+      //   continue
+      // }
       gherkinQuery.update(envelope)
       cucumberQuery.update(envelope)
     }
