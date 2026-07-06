@@ -1,7 +1,7 @@
 import { type Envelope, type TestCaseStarted, TimeConversion } from '@cucumber/messages'
 import type { Story } from '@ladle/react'
 
-import examplesTablesFeature from '../../../acceptance/examples-tables/examples-tables.js'
+import examplesTablesFeature from '../../../acceptance/parallel-messages/parallel-messages.js'
 import { EnvelopesProvider } from './EnvelopesProvider.js'
 import { InMemorySearchProvider } from './InMemorySearchProvider.js'
 import { Timeline } from './Timeline.js'

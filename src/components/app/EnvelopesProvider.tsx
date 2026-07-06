@@ -14,6 +14,9 @@ export const EnvelopesProvider: FC<PropsWithChildren<Props>> = ({ envelopes, chi
     const gherkinQuery = new GherkinQuery()
     const cucumberQuery = new CucumberQuery()
     for (const envelope of envelopes) {
+      if (!envelope) {
+        continue
+      }
       gherkinQuery.update(envelope)
       cucumberQuery.update(envelope)
     }
